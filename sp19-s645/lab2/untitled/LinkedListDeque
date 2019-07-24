@@ -1,0 +1,48 @@
+public class LinkedListDeque{
+    private static class IntNode {
+        public int item;
+        public IntNode next;
+
+        public IntNode(int i, IntNode n) {
+            item = i;
+            next = n;
+        }
+    }
+
+
+    private IntNode first;
+
+    public SLList(int x) {
+        first = new IntNode(x, null);
+    }
+    /** Adds an item to the end of the list. */
+    public void addLast(int x) {
+        if(first==null){
+            first=new IntNode(x, null);
+            return;
+        }
+        IntNode p = first;
+
+
+        while (p.next != null) {
+            p = p.next;
+        }
+        p.next = new IntNode(x, null);
+    }
+    /** Returns the size of the list starting at IntNode p. */
+
+
+    public void addFirst(int x) {
+        first = new IntNode(x, first);
+    }
+
+
+    public static void main(String[] args) {
+        /* Creates a list of one integer, namely 10 */
+        LinkedListDeque L = new LinkedListDeque(5);
+        L.addLast(20);
+        L.addLast(20);
+        L.addFirst(20);
+
+    }
+}

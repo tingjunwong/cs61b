@@ -1,0 +1,34 @@
+public void reverse() {
+ first = reverse(first);
+ }
+
+ private IntNode reverse(IntNode frt) {
+ if (frt == null || frt.next == null) {
+ return front;
+ } 
+ else{
+ IntNode result = reverse(frt.next);
+ frt.next.next = frt;
+ frt.next = null;
+ return result;
+ }
+ }
+
+
+
+ public void reverse(IntList frt) {
+        if (frt == null || frt.next == null) {
+            return ;
+        } else {
+            IntList v = null;
+            IntList p = frt;
+            IntList ptr = null;
+            while (p != null) {
+                ptr = p.rest;
+                p.rest = v;
+                v = p;
+                p = ptr;
+            }
+            return v;
+        }
+    }

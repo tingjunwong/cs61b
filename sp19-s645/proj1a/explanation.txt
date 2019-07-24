@@ -1,0 +1,1 @@
+Truly sorry for debugging. It's time-exhausting.   And actually, the arraylist is much harder than the linkedlistque ,so the thinking is not so successful at first.
